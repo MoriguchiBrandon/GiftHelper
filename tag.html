@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Tag Form</title>
+<meta name="description" content="A page to get the tag">
+</head>
+
+<body>
+    <h1>Tag Details</h1>
+    <form>
+        <label tag="tag">Tag: {{form.tag}}</label><br>
+     </form> 
+
+    <tabel>
+        <tr>
+            {$ for headings in headings $}
+            <th>{{headings}}<th>
+            {% endfor %}
+        <tr>
+        {$ for data in data $}
+            <tr>
+            {$ for cell in row $}
+            <td>{{cell}}<td>   
+            {% endfor %}
+            <tr>
+        {% endfor %}
+        <tr>
+     <table>
+</body>
+</html>

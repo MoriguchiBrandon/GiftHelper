@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+<title>list form</title>
+<meta name="description" content="A page to display results" charset = "UTF-8">
+</head>
+
+<body>
+    <table>
+        <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{title[0]}}</td>
+            <td>{{image[0]}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Add a header for the form-->
+    <h2>list Form</h2>
+
+    <!--Make a form with person action and post method-->
+    <form action="/tag" method="post">
+
+        <!--Add a a label and input for first name
+            Be sure to link the name to the fname variable-->
+        <label for ="tag">Tag: </label><br>
+        <input type="text" id="tag" name="tag"><br>
+
+        <!--Make a submit button with the text Register-->
+        <input type="submit" value="Register">
+    </form> 
+</body>
+
+</html>
